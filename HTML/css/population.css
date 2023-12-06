@@ -1,7 +1,12 @@
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Black Han Sans', sans-serif;
+	font-family: 'Do Hyeon', sans-serif;
+	font-family: 'Gothic A1', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
 #container{
@@ -51,6 +56,10 @@ nav{
 	width: 1295px;
 }
 
+#floatingTable table th {
+	background-color: #F8F9FA;
+}
+
  #floatingTable table tr{
 	margin: 0 auto;
 } 
@@ -61,6 +70,10 @@ nav{
 
 #dayOfTheWeek table{
 	width: 1295px;
+}
+
+#dayOfTheWeek table th {
+	background-color: #F8F9FA;
 }
 
 /******************************/
@@ -76,12 +89,21 @@ nav{
 	width: 1295px;
 }
 
+#residentTable table th {
+	background-color: #F8F9FA;
+}
+
+
 #ageGender{
 	margin-top: 50px;
 
 }
 #ageGender table{
 	width: 1295px;
+}
+
+#ageGender table th {
+	background-color: #F8F9FA;
 }
 
 /******************************/
@@ -97,6 +119,10 @@ nav{
 }
 #forecastTable table{
 	width: 1295px;
+}
+
+#forecastTable table th {
+	background-color: #F8F9FA;
 }
 
 /******************************/

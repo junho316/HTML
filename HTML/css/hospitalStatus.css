@@ -2,22 +2,26 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Black Han Sans', sans-serif;
+	font-family: 'Do Hyeon', sans-serif;
+	font-family: 'Gothic A1', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
 
-#container{
+#container {
 	margin: 0 auto;
 	width: 100%;
 }
 
-a{
+a {
 	text-decoration: none;
 }
 
-ul{
+ul {
 	list-style: none;
 }
 
-table tbody th{
+table tbody th {
 	width: 15%;
 }
 
@@ -25,7 +29,7 @@ table tbody th{
 /* HEADER                     */
 /******************************/
 
-nav{
+nav {
 	background-color: white;
 	border-bottom: 1px lightgray solid;
 	height: 60px;
@@ -34,59 +38,65 @@ nav{
 
 /**********************************  */
 
-#shadow{
+#shadow {
 	background-color: white;
 	border-radius: 50px;
 	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
-#hospitalStatusDashboard{
+#hospitalStatusDashboard {
 	background-color: white;
 	margin-top: 50px;
 	height: 500px;
-	border-radius: 40px;
-	overflow: hidden;
-	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
-#hospitalStatusTable{
+#hospitalStatusTable {
 	margin-top: 50px;
 	height: 200px;
-	border-radius: 40px;
-	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
-#hospitalStatusTable table{
+#hospitalStatusTable table {
 	width: 1293px;
 }
 
+
+#hospitalStatusTable table th {
+	background-color: #F8F9FA;
+}
 /**********************************  */
 
-#dayOfTheWeek{
+#dayOfTheWeek {
 	margin-top: 50px;
 	height: 200px;
 }
 
-#dayOfTheWeek table{
+#dayOfTheWeek table {
+
 	width: 1293px;
 }
 
+#dayOfTheWeek table th {
+	background-color: #F8F9FA;
+}
 /**********************************  */
 
-#popuDivideHos{
+#popuDivideHos {
 	margin-top: 50px;
 	height: 200px;
 }
 
-#popuDivideHos table{
+#popuDivideHos table {
 	width: 1293px;
 }
 
+#popuDivideHos table th {
+	background-color: #F8F9FA;
+}
 /******************************/
 /* FOOTER                     */
 /******************************/
 
-footer{
+footer {
 	background-color: white;
 	border-top: 1px lightgray solid;
 }

@@ -1,8 +1,14 @@
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Black Han Sans', sans-serif;
+	font-family: 'Do Hyeon', sans-serif;
+	font-family: 'Gothic A1', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
+
 
 #container{
 	margin: 0 auto;
@@ -15,6 +21,12 @@ a{
 
 ul{
 	list-style: none;
+}
+
+.borderShadow{
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
 /******************************/
@@ -30,7 +42,7 @@ nav{
 	margin-top: 50px;
 	margin-bottom: 50px;
 	height: 800px;
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	overflow: hidden;
 }
 
@@ -38,10 +50,12 @@ nav{
 	width: 160px;
 	position: absolute; 
 	z-index: 2;
-	margin-top: 10px;
-	margin-left: 10px;
+	margin-top: 20px;
+	margin-left: 20px;
 	background-color: #F8F9FA;
 	border: 1px solid black;
+	/* border-radius: 50px;
+	box-shadow: 2px 2px 2px 2px gray; */
 }
 
 #map .dropdown-menu{

@@ -1,8 +1,14 @@
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Black Han Sans', sans-serif;
+	font-family: 'Do Hyeon', sans-serif;
+	font-family: 'Gothic A1', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
 }
+
 
 #container {
 	margin: 0 auto;
@@ -15,6 +21,12 @@ a {
 
 ul {
 	list-style: none;
+}
+
+.borderShadow{
+	background-color: white;
+	border-radius: 50px;
+	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
 /* Carousel */
@@ -72,7 +84,27 @@ ul {
 	color: white;
 	font-size: 1.2rem;
 }
+/* board */
 
+#board2 {
+	margin-top: 50px;
+	height: 500px;
+	padding: 0;
+	overflow: hidden;
+}
+
+#board2 #title {
+	height: 100px;
+	line-height: 100px;
+	padding-left: 10px;
+	margin: 0;
+	font-size: 2rem;
+}
+
+#board2 a {
+	text-decoration: none;
+	color: black;
+}
 
 /* board */
 
@@ -80,12 +112,13 @@ ul {
 	margin-top: 50px;
 	height: 500px;
 	padding: 0;
+	overflow: hidden;
 }
 
 #board #title {
 	height: 100px;
 	line-height: 100px;
-	padding-left: 10px;
+	padding-left: 20px;
 	margin: 0;
 	font-size: 2rem;
 }

@@ -19,7 +19,7 @@ function drawChart1() {
             // title: '위례시 치과 개·폐업 현황',
             // subtitle: 'Sales, Expenses, and Profit: 2014-2017',
         },
-				width: 1200
+
     };
     var chart = new google.charts.Bar(document.getElementById('hospitalStatusDashboard'));
     chart.draw(data, google.charts.Bar.convertOptions(options));
@@ -39,7 +39,7 @@ function drawChart2() {
             // title: '위례시 치과 개·폐업 현황',
             // subtitle: 'Sales, Expenses, and Profit: 2014-2017',
         },
-				width: 1200
+
     };
     var chart = new google.charts.Bar(document.getElementById('residentDashboard'));
     chart.draw(data, google.charts.Bar.convertOptions(options));
