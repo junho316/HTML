@@ -43,7 +43,7 @@ nav {
 }
 
 /* 분기별 */
-#quarterlyPop {
+#quarterlyPop h4 {
 	padding-left: 20px;
 }
 
@@ -71,7 +71,7 @@ nav {
 
 /* 요일별 */
 
-#dayOfTheWeek {
+#dayOfTheWeek h4 {
 	padding-left: 20px;
 }
 
