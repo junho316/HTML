@@ -23,10 +23,23 @@ var forecastChart = new Chart(ctx, {
 		]
 	},
 	options: {
-		responsive: false
+		plugins: {
+			legend: {
+				labels: {
+					font: {
+						size: 20,
+						family: 'Noto Sans KR'
+					}
+				}
+			}
+		}
 	}
 });
 
 
+function resizeChart() {
+	forecastChart.resize();
+}
 
+window.addEventListener('resize', resizeChart);
 

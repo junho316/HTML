@@ -22,6 +22,28 @@ var openCloseHosChart = new Chart(ctx, {
 		]
 	},
 	options: {
-		responsive: false
+		plugins: {
+			legend: {
+				labels: {
+					font: {
+						size: 20,
+						family: 'Noto Sans KR'
+					}
+				}
+			}
+		},scales: {
+			y: {
+				font: {
+					size: 20,
+					family: 'Noto Sans KR'
+				}
+			}
+	}
 	}
 });
+
+function resizeChart() {
+	openCloseHosChart.resize();
+}
+
+window.addEventListener('resize', resizeChart);

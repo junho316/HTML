@@ -23,10 +23,23 @@ var quarterlyPopChart = new Chart(ctx, {
 		]
 	},
 	options: {
-		responsive: false
+		plugins: {
+			legend: {
+				labels: {
+					font: {
+						size: 20,
+						family: 'Noto Sans KR'
+					}
+				}
+			}
+		}
 	}
 });
 
+function resizeChart() {
+	quarterlyPopChart.resize();
+}
 
+window.addEventListener('resize', resizeChart);
 
 

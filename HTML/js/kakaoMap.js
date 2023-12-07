@@ -160,6 +160,7 @@ var marker3 = new kakao.maps.Marker({
 	position: markerPosition3
 });
 
+
 // 지도에 표시 -------------------------------------------------------------
 function addArea() {
 	polygon.setMap(map);
@@ -184,3 +185,19 @@ function delArea() {
 	marker2.setMap(map);
 	marker3.setMap(map);
 }
+
+// 지도이동-----------------------------------------------------------------
+function setDraggable(draggable) {
+	// 마우스 드래그로 지도 이동 가능여부를 설정합니다
+	map.setDraggable(draggable);    
+}
+
+
+function setZoomable(zoomable) {
+	// 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+	map.setZoomable(zoomable);    
+}
+window.addEventListener('load', function(){
+  setDraggable();
+	setZoomable();
+});
