@@ -31,8 +31,12 @@ table tbody th {
 	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
-/* nav */
+#chartArea {
+	padding-left: 20px;
+	padding-right: 20px;
+}
 
+/* nav */
 nav {
 	background-color: white;
 	border-bottom: 1px solid lightgray;
@@ -44,7 +48,7 @@ nav {
 
 /* 분기별 */
 #quarterlyPop h4 {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 #quarterlyPopChart {
@@ -54,10 +58,12 @@ nav {
 
 #quarterlyPopTable {
 	margin-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #quarterlyPopTable table {
-	width: 1295px;
+	width: 1250px;
 }
 
 #quarterlyPopTable table th {
@@ -72,15 +78,17 @@ nav {
 /* 요일별 */
 
 #dayOfTheWeek h4 {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 #dayOfTheWeekTable {
+	padding-left: 20px;
+	padding-right: 20px;
 	margin-top: 50px;
 }
 
 #dayOfTheWeekTable table {
-	width: 1295px;
+	width: 1250px;
 }
 
 #dayOfTheWeekTable table th {
@@ -90,7 +98,7 @@ nav {
 /******************************/
 
 #resident h4 {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 #residentChart {
@@ -100,10 +108,12 @@ nav {
 
 #residentTable {
 	margin-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #residentTable table {
-	width: 1295px;
+	width: 1250px;
 }
 
 #residentTable table th {
@@ -114,11 +124,12 @@ nav {
 
 #ageGenderTable {
 	margin-top: 50px;
-
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #ageGenderTable table {
-	width: 1295px;
+	width: 1250px;
 }
 
 #ageGenderTable table th {
@@ -128,7 +139,7 @@ nav {
 /******************************/
 
 #forecast h4 {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 
@@ -139,10 +150,12 @@ nav {
 
 #forecastTable {
 	margin-top: 50px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #forecastTable table {
-	width: 1295px;
+	width: 1250px;
 }
 
 #forecastTable table th {

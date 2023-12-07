@@ -35,6 +35,11 @@ table tbody th {
 	font-weight: bolder;
 }
 
+#chartArea{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
 /* nav */
 
 nav {
@@ -51,22 +56,18 @@ nav {
 /* 병원 현황 */
 
 #OpenCloseHos h4 {
-	padding-left: 20px;
-}
-
-#OpenCloseHosChart {
-	background-color: white;
-	margin-top: 50px;
-	height: 500px;
+	padding-left: 40px;
 }
 
 #OpenCloseHosTable {
 	margin-top: 50px;
 	height: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #OpenCloseHosTable table {
-	width: 1293px;
+	width: 1250px;
 }
 
 
@@ -77,18 +78,19 @@ nav {
 /**********************************  */
 
 #numOfHos h4 {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 #numOfHosTable {
 	margin-top: 50px;
 	height: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 
 #numOfHosTable table {
-
-	width: 1293px;
+	width: 1250px;
 }
 
 #numOfHosTable table th {
@@ -99,16 +101,18 @@ nav {
 
 
 #popuDivideHos h4 {
-	padding-left: 20px;
+	padding-left: 40px;
 }
 
 #popuDivideHosTable {
 	margin-top: 50px;
 	height: 200px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 #popuDivideHosTable table {
-	width: 1293px;
+	width: 1250px;
 }
 
 #popuDivideHosTable table th {
