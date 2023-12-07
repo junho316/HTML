@@ -1,3 +1,4 @@
+
 * {
 	margin: 0;
 	padding: 0;
@@ -8,101 +9,83 @@
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
-#container {
+#container{
 	margin: 0 auto;
 	width: 100%;
 }
 
-a {
+a{
 	text-decoration: none;
 }
 
-ul {
+ul{
 	list-style: none;
 }
 
-table tbody th {
+table tbody th{
 	width: 15%;
 }
 
-.boxShadow {
+/******************************/
+/* HEADER                     */
+/******************************/
+nav{
+	border-bottom: 1px lightgray solid;
+	background-color: white;
+}
+
+/******************************/
+/* body                       */
+/******************************/
+
+#shadow{
 	background-color: white;
 	border-radius: 50px;
 	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
-/* nav */
-
-nav {
-	background-color: white;
-	border-bottom: 1px solid lightgray;
-}
-
-#loginBtn {
-	background-color: darkgray;
-}
-
-/* 분기별 */
-#quarterlyPop {
-	padding-left: 20px;
-}
-
-#quarterlyPopChart {
+#floatingDashboard{
 	margin-top: 50px;
 	height: 500px;
 }
-
-#quarterlyPopTable {
+#floatingTable{
 	margin-top: 50px;
 }
 
-#quarterlyPopTable table {
+#floatingTable table{
 	width: 1295px;
 }
 
-#quarterlyPopTable table th {
+#floatingTable table th {
 	background-color: #F8F9FA;
 }
 
-#quarterlyPopTable table tr {
+ #floatingTable table tr{
 	margin: 0 auto;
-}
+} 
 
-
-/* 요일별 */
-
-#dayOfTheWeek {
-	padding-left: 20px;
-}
-
-#dayOfTheWeekTable {
+#dayOfTheWeek{
 	margin-top: 50px;
 }
 
-#dayOfTheWeekTable table {
+#dayOfTheWeek table{
 	width: 1295px;
 }
 
-#dayOfTheWeekTable table th {
+#dayOfTheWeek table th {
 	background-color: #F8F9FA;
 }
 
 /******************************/
-
-#resident h4 {
-	padding-left: 20px;
-}
-
-#residentChart {
+#residentDashboard{
 	margin-top: 50px;
 	height: 500px;
 }
-
-#residentTable {
+#residentTable{
 	margin-top: 50px;
 }
 
-#residentTable table {
+#residentTable table{
 	width: 1295px;
 }
 
@@ -110,38 +93,31 @@ nav {
 	background-color: #F8F9FA;
 }
 
-/* 성별 연령 */
 
-#ageGenderTable {
+#ageGender{
 	margin-top: 50px;
 
 }
-
-#ageGenderTable table {
+#ageGender table{
 	width: 1295px;
 }
 
-#ageGenderTable table th {
+#ageGender table th {
 	background-color: #F8F9FA;
 }
 
 /******************************/
 
-#forecast h4 {
-	padding-left: 20px;
-}
-
-
-#forecastChart {
+#forecastDashboard{
 	margin-top: 50px;
 	height: 500px;
 }
 
-#forecastTable {
+#forecastTable{
 	margin-top: 50px;
-}
 
-#forecastTable table {
+}
+#forecastTable table{
 	width: 1295px;
 }
 
@@ -153,7 +129,7 @@ nav {
 /* FOOTER                     */
 /******************************/
 
-footer {
+footer{
 
 	background-color: white;
 

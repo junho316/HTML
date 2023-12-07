@@ -25,96 +25,73 @@ table tbody th {
 	width: 15%;
 }
 
-.boxShadow {
+/******************************/
+/* HEADER                     */
+/******************************/
+
+nav {
+	background-color: white;
+	border-bottom: 1px lightgray solid;
+	height: 60px;
+	background-color: white;
+}
+
+/**********************************  */
+
+#shadow {
 	background-color: white;
 	border-radius: 50px;
 	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
-.bolder {
-	font-weight: bolder;
-}
-
-/* nav */
-
-nav {
-	background-color: white;
-	border-bottom: 1px solid lightgray;
-}
-
-#loginBtn {
-	background-color: darkgray;
-}
-
-/* content */
-
-/* 병원 현황 */
-
-#OpenCloseHos h4 {
-	padding-left: 20px;
-}
-
-#OpenCloseHosChart {
+#hospitalStatusDashboard {
 	background-color: white;
 	margin-top: 50px;
 	height: 500px;
 }
 
-#OpenCloseHosTable {
+#hospitalStatusTable {
 	margin-top: 50px;
 	height: 200px;
 }
 
-#OpenCloseHosTable table {
+#hospitalStatusTable table {
 	width: 1293px;
 }
 
 
-#OpenCloseHosTable table th {
+#hospitalStatusTable table th {
 	background-color: #F8F9FA;
 }
-
 /**********************************  */
 
-#numOfHos h4 {
-	padding-left: 20px;
-}
-
-#numOfHosTable {
+#dayOfTheWeek {
 	margin-top: 50px;
 	height: 200px;
 }
 
-
-#numOfHosTable table {
+#dayOfTheWeek table {
 
 	width: 1293px;
 }
 
-#numOfHosTable table th {
+#dayOfTheWeek table th {
 	background-color: #F8F9FA;
 }
-
 /**********************************  */
 
-
-#popuDivideHos h4 {
-	padding-left: 20px;
-}
-
-#popuDivideHosTable {
+#popuDivideHos {
 	margin-top: 50px;
 	height: 200px;
 }
 
-#popuDivideHosTable table {
+#popuDivideHos table {
 	width: 1293px;
 }
 
-#popuDivideHosTable table th {
+#popuDivideHos table th {
 	background-color: #F8F9FA;
 }
-
 /******************************/
 /* FOOTER                     */
 /******************************/

@@ -5,25 +5,33 @@
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<!-- css,font -->
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/map.css">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet"
+		href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Gothic+A1:wght@500&family=Noto+Sans+KR:wght@500&display=swap">
+	<!-- 스크립트 -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Gothic+A1:wght@500&family=Noto+Sans+KR:wght@500&display=swap"
-		rel="stylesheet">
+	<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f622a57db8d51137b80a7e575e09fca"></script>
+	<script src="js/main.js"></script>
+	<script src="js/kakaoMap.js"></script>
+	<script src="js/map.js"></script>
+
 	<title>Main Page</title>
 </head>
 
 <body class="vh-100 overflow-hiddden">
-	<!--nav------------------------------------ ------------------------------------------------------->
-	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light " style="border-bottom: 1px solid lightgray;">
+	<!--nav------------------------------------------------------------------------------------------->
+	<nav class="navbar fixed-top navbar-expand-lg">
 		<div class="container">
 			<!-- LOGO -->
 			<a class="navbar-brand fs-4" href="main.html">LOGO</a>
-			<!-- Toggle BTN -->
+
+			<!-- Toggle BTN(모바일 비율 아이콘) -->
 			<button class="navbar-toggler shadow-none border-0 " type="button" data-bs-toggle="offcanvas"
 				data-bs-target="#offcanvasNavbar">
 				<span class="navbar-toggler-icon"></span>
@@ -36,21 +44,17 @@
 					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">LOGO</h5>
 					<button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
 				</div>
+
 				<!-- sidebar body -->
 				<div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
 					<ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
-						<!-- <li class="nav-item mx-4">
-							<a class="nav-link" href="/main.html">홈</a>
-						</li> -->
 						<div class="dropdown-center">
 							<li class="nav-item dropdown mx-5">
-								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-									입지분석
-								</a>
+								<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">입지분석</a>
 								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="population.html">인구분석</a></li>
 									<li><a class="dropdown-item" href="hospitalStatus.html">병원현황</a></li>
-									<li><a class="dropdown-item" href="map.html">map</a></li>
+									<li><a class="dropdown-item" href="map.html">지도</a></li>
 								</ul>
 							</li>
 						</div>
@@ -63,16 +67,15 @@
 					</ul>
 					<div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
 						<a href="#" class="text-dark">로그인</a>
-						<a href="#" class="text-white text-decoration-none px-3 py-1 rounded-4"
-							style="background-color: darkgray;">회원가입</a>
+						<a id="loginBtn" href="#" class="text-white text-decoration-none px-3 py-1 rounded-4">회원가입</a>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</nav>
 
-	<!--carousel ------------------------------------------------------->
-
+	<!--carousel ------------------------------------------------------------->
 	<div>
 		<div id="mainCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-interval="4000">
 			<!-- 하단 현재위치  -->
@@ -82,13 +85,14 @@
 				<button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
 			</div>
 
+			<!-- carousel page1 -->
 			<div class="carousel-inner">
 				<div class="carousel-item active">
 					<img src="img/1.jpg" alt="">
 					<div class="container">
 						<div class="carousel-caption text-start">
-							<div class="title">신도시 입지분석 서비스</div>
-							<div class="col-xs-12 col-sm-12 col-lg-6 detail">
+							<div id="title">신도시 입지분석 서비스</div>
+							<div id="detail" class="col-xs-12 col-sm-12 col-lg-6">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio minima
 								facilis quos obcaecati, perferendis est consequatur similique corporis esse? Cum rerum
 								ad tenetur,
@@ -104,12 +108,13 @@
 					</div>
 				</div>
 
+				<!-- carousel page2 -->
 				<div class="carousel-item">
 					<img src="img/2.jpg" alt="">
 					<div class="container">
 						<div class="carousel-caption text-start">
-							<div class="title">신도시 매출분석 서비스</div>
-							<div class="col-xs-12 col-sm-12 col-lg-6 detail">
+							<div id="title">신도시 매출분석 서비스</div>
+							<div id="detail" class="col-xs-12 col-sm-12 col-lg-6">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio minima
 								facilis quos obcaecati, perferendis est consequatur similique corporis esse? Cum rerum
 								ad tenetur,
@@ -120,12 +125,13 @@
 					</div>
 				</div>
 
+				<!-- carousel page3 -->
 				<div class="carousel-item">
 					<img src="img/3.jpg" alt="">
 					<div class="container">
 						<div class="carousel-caption text-start">
-							<div class="title">신도시 입지분석 서비스</div>
-							<div class="col-xs-12 col-sm-12 col-lg-6 detail">
+							<div id="title">신도시 입지분석 서비스</div>
+							<div id="detail" class="col-xs-12 col-sm-12 col-lg-6">
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste distinctio minima
 								facilis quos obcaecati, perferendis est consequatur similique corporis esse? Cum rerum
 								ad tenetur,
@@ -135,180 +141,126 @@
 						</div>
 					</div>
 				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-			</button>
-		</div>
-	</div>
 
-	<!--------------------------------------------------------------------------------------------->
-
-	<div class="container">
-		<div class="row">
-			<div id="board2" class="col-lg-6">
-				<div id="title" style="height: 50%;">
-					<a href="#" style="font-weight: bolder;">사이트 소개1</a>
-					<h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat a in labore dolor minus vero delectus corrupti. Facilis quibusdam dolores odio eum blanditiis temporibus dolorum, similique porro ipsam? Minima, perferendis.</h6>
-				</div>
-				<div id="title" style="width: 50%; height: 50%; float: left;">
-					<a href="#" style="font-weight: bolder;">사이트 소개2</a>
-					<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, est? Earum molestiae maiores expedita ad rem repellat eligendi beatae accusantium voluptatum soluta quod, enim nisi quasi fugiat blanditiis odio facilis!</h6>
-				</div>
-				<div id="title" style="width: 50%; height: 50%; float: left;">
-					<a href="#" style="font-weight: bolder;">사이트 소개3</a>
-					<h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, accusamus. Minima cumque, debitis porro repellendus et nesciunt excepturi magni architecto commodi facere. Cumque non in est accusamus ex, magnam rerum.</h6>
-				</div>
-			</div>
-
-			<!--게시판------------------------------------------------------------------------------------------->
-			<div id="board" class="col-lg-6 ">
-				<div id="title">
-					<a href="#" style="font-weight: bolder;">게시판</a>
-				</div>
-				<table class="table">
-					<colgroup>
-						<col width=10%>
-						<col width=60%>
-						<col width=30%>
-					</colgroup>
-					<thead>
-					</thead>
-					<tbody>
-						<tr>
-							<th>1</th>
-							<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-									dignissimos vitae vero
-									voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
-									rerum eaque dolor
-									nesciunt accusantium at consequuntur. Minima!</a></td>
-							<td>2022-02-22</td>
-						</tr>
-						<tr>
-							<th>2</th>
-							<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-									dignissimos vitae vero
-									voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
-									rerum eaque dolor
-									nesciunt accusantium at consequuntur. Minima!</a></td>
-							<td>2022-02-22</td>
-						</tr>
-						<tr>
-							<th>3</th>
-							<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-									dignissimos vitae vero
-									voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
-									rerum eaque dolor
-									nesciunt accusantium at consequuntur. Minima!</a></td>
-							<td>2022-02-22</td>
-						</tr>
-						<tr>
-							<th>4</th>
-							<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-									dignissimos vitae vero
-									voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
-									rerum eaque dolor
-									nesciunt accusantium at consequuntur. Minima!</a></td>
-							<td>2022-02-22</td>
-						</tr>
-						<tr>
-							<th>5</th>
-							<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-									dignissimos vitae vero
-									voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
-									rerum eaque dolor
-									nesciunt accusantium at consequuntur. Minima!</a></td>
-							<td>2022-02-22</td>
-						</tr>
-						<tr>
-							<th>6</th>
-							<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-									dignissimos vitae vero
-									voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
-									rerum eaque dolor
-									nesciunt accusantium at consequuntur. Minima!</a></td>
-							<td>2022-02-22</td>
-						</tr>
-						<tr>
-							<th>7</th>
-							<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-									dignissimos vitae vero
-									voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
-									rerum eaque dolor
-									nesciunt accusantium at consequuntur. Minima!</a></td>
-							<td>2022-02-22</td>
-						</tr>
-						<tr>
-							<th>8</th>
-							<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-									dignissimos vitae vero
-									voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
-									rerum eaque dolor
-									nesciunt accusantium at consequuntur. Minima!</a></td>
-							<td>2022-02-22</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
-	</div>
-
-	<div class="container" style="position: relative;">
-		<h1 style="margin-top: 50px;font-weight: bolder;">지도</h1>
-		<div id="map" class="col-lg-12">
-			<div class="dropdown">
-				<button class="btn btn-first dropdown-toggle" type="button" id="mapMenu" data-bs-toggle="dropdown"
-					aria-expanded="false">
-					선택
+				<!-- carousel 좌우 버튼 -->
+				<button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
 				</button>
-				<ul class="dropdown-menu">
-					<li onclick="addArea();mapMenuClick(this)">거주 인구</li>
-					<li onclick="addArea();mapMenuClick(this)">유동 인구</li>
-					<li onclick="addArea();mapMenuClick(this)">인구/병원수</a></li>
-					<li onclick="addArea();mapMenuClick(this)">병원수</li>
-					<li onclick="delArea();mapMenuClick(this)">병원 위치</li>
-				</ul>
+				<button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+				</button>
 			</div>
 		</div>
-	</div>
 
-	<!-- Modal -->
-	<div class="modal fade" id="areaPopUP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="PopUpArea"></h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		<!--본문 1 ------------------------------------------------------------------------------------------->
+		<div class="container">
+			<div class="row">
+
+				<!-- 본문1 왼쪽 -->
+				<div id="boardLeft" class="col-lg-6">
+					<div id="top">
+						<a href="#">사이트 소개1</a>
+						<h6>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat a in labore dolor minus vero delectus
+							corrupti. Facilis quibusdam dolores odio eum blanditiis temporibus dolorum, similique porro ipsam? Minima,
+							perferendis.</h6>
+					</div>
+					<div id="bottom">
+						<a href="#">사이트 소개2</a>
+						<h6>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, est? Earum molestiae maiores
+							expedita ad rem repellat eligendi beatae accusantium voluptatum soluta quod, enim nisi quasi fugiat
+							blanditiis odio facilis!</h6>
+					</div>
+					<div id="bottom">
+						<a href="#">사이트 소개3</a>
+						<h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, accusamus. Minima cumque, debitis porro
+							repellendus et nesciunt excepturi magni architecto commodi facere. Cumque non in est accusamus ex, magnam
+							rerum.</h6>
+					</div>
 				</div>
-				<div class="modal-body">
+
+				<!-- 본문1 오른쪽(게시판)------------------------------------------------------------------------------------------->
+				<div id="boardRight" class="col-lg-6 ">
+					<div id="title">
+						<a href="#">게시판</a>
+					</div>
 					<table class="table">
+						<colgroup>
+							<col width=10%>
+							<col width=60%>
+							<col width=30%>
+						</colgroup>
 						<thead>
-							<tr>
-								<th scope="col"></th>
-								<th scope="col">수/명</th>
-							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<th scope="row">병원수</th>
-								<td>1</td>
+								<th>1</th>
+								<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+										dignissimos vitae vero
+										voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
+										rerum eaque dolor
+										nesciunt accusantium at consequuntur. Minima!</a></td>
+								<td>2022-02-22</td>
 							</tr>
 							<tr>
-								<th scope="row">유동인구</th>
-								<td>2</td>
+								<th>2</th>
+								<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+										dignissimos vitae vero
+										voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
+										rerum eaque dolor
+										nesciunt accusantium at consequuntur. Minima!</a></td>
+								<td>2022-02-22</td>
 							</tr>
 							<tr>
-								<th scope="row">주거인구</th>
-								<td>3</td>
+								<th>3</th>
+								<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+										dignissimos vitae vero
+										voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
+										rerum eaque dolor
+										nesciunt accusantium at consequuntur. Minima!</a></td>
+								<td>2022-02-22</td>
 							</tr>
 							<tr>
-								<th scope="row">인구/병원수</th>
-								<td>4</td>
+								<th>4</th>
+								<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+										dignissimos vitae vero
+										voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
+										rerum eaque dolor
+										nesciunt accusantium at consequuntur. Minima!</a></td>
+								<td>2022-02-22</td>
 							</tr>
 							<tr>
-								<th scope="row">가장많은 연령대</th>
-								<td>5</td>
+								<th>5</th>
+								<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+										dignissimos vitae vero
+										voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
+										rerum eaque dolor
+										nesciunt accusantium at consequuntur. Minima!</a></td>
+								<td>2022-02-22</td>
+							</tr>
+							<tr>
+								<th>6</th>
+								<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+										dignissimos vitae vero
+										voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
+										rerum eaque dolor
+										nesciunt accusantium at consequuntur. Minima!</a></td>
+								<td>2022-02-22</td>
+							</tr>
+							<tr>
+								<th>7</th>
+								<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+										dignissimos vitae vero
+										voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
+										rerum eaque dolor
+										nesciunt accusantium at consequuntur. Minima!</a></td>
+								<td>2022-02-22</td>
+							</tr>
+							<tr>
+								<th>8</th>
+								<td><a href="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+										dignissimos vitae vero
+										voluptatibus labore quibusdam, dolorem quisquam placeat sint iure, molestiae aut
+										rerum eaque dolor
+										nesciunt accusantium at consequuntur. Minima!</a></td>
+								<td>2022-02-22</td>
 							</tr>
 						</tbody>
 					</table>
@@ -316,33 +268,92 @@
 
 			</div>
 		</div>
-	</div>
 
-	<!--footer------------------------------------------------------------------------------------------->
-
-	<footer class="text-body-secondary py-5">
-		<div class="container">
-			<div class="row">
-				<div class="col-6">
-					<p class="mb-1">이용약관 개인정보처리방침 회사소개</p>
-					<p></p>
-					<p class="mb-1">서울특별시 마포구 </p>
-					<p class="mb-0">대표번호 : 02-1111-1111 l FAX : 02-111-1111</p>
-				</div>
-				<div class="col-6">
-					<p class="float-end mb-1">
-						Lorem ipsum dolor sit amet consectetu
-					</p>
+		<!--본문 2(지도) ------------------------------------------------------------------------------------------->
+		<div id="content2" class="container">
+			<h1>지도</h1>
+			<div id="map" class="col-lg-12">
+				<div class="dropdown">
+					<button class="btn btn-first dropdown-toggle" type="button" id="mapMenu" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						선택
+					</button>
+					<ul class="dropdown-menu">
+						<li onclick="addArea();mapMenuClick(this)">거주 인구</li>
+						<li onclick="addArea();mapMenuClick(this)">유동 인구</li>
+						<li onclick="addArea();mapMenuClick(this)">인구/병원수</a></li>
+						<li onclick="addArea();mapMenuClick(this)">병원수</li>
+						<li onclick="delArea();mapMenuClick(this)">병원 위치</li>
+					</ul>
 				</div>
 			</div>
 		</div>
-	</footer>
 
-	<script type="text/javascript"
-		src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9f622a57db8d51137b80a7e575e09fca"></script>
-	<script src="js/main.js"></script>
-	<script src="js/kakaoMap.js"></script>
-	<script src="js/map.js"></script>
+		<!-- 지도표시 팝업 -->
+		<div class="modal fade" id="areaPopUP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="PopUpArea"></h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<table class="table">
+							<thead>
+								<tr>
+									<th></th>
+									<th>수/명</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th>병원수</th>
+									<td>1</td>
+								</tr>
+								<tr>
+									<th>유동인구</th>
+									<td>2</td>
+								</tr>
+								<tr>
+									<th>주거인구</th>
+									<td>3</td>
+								</tr>
+								<tr>
+									<th>인구/병원수</th>
+									<td>4</td>
+								</tr>
+								<tr>
+									<th>가장많은 연령대</th>
+									<td>5</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!--footer------------------------------------------------------------------------------------------->
+
+		<footer class="text-body-secondary py-5">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<p class="mb-1">이용약관 개인정보처리방침 회사소개</p>
+						<p></p>
+						<p class="mb-1">서울특별시 마포구 </p>
+						<p class="mb-0">대표번호 : 02-1111-1111 l FAX : 02-111-1111</p>
+					</div>
+					<div class="col-6">
+						<p class="float-end mb-1">
+							Lorem ipsum dolor sit amet consectetu
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
 </body>
 
 </html>

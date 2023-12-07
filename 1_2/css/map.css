@@ -1,3 +1,4 @@
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,79 +10,68 @@
 }
 
 
-#container {
+#container{
 	margin: 0 auto;
 	width: 100%;
 }
 
-a {
+a{
 	text-decoration: none;
 }
 
-ul {
+ul{
 	list-style: none;
 }
 
-.boxShadow {
+.borderShadow{
 	background-color: white;
 	border-radius: 50px;
 	box-shadow: 5px 5px 5px 5px lightgray;
 }
 
+/******************************/
+/* HEADER                     */
+/******************************/
 
-/* HEADER  */
-
-
-nav {
+nav{
 	background-color: white;
 	border-bottom: 1px lightgray solid;
 }
 
-/* content */
-
-#background{
-	background-color: #F8F9FA;
-}
-
-#background .container{
-	position: relative;
-}
-
-#background h1{
-	font-weight: bolder;
-}
-
-#map {
+#map{
 	margin-top: 50px;
 	margin-bottom: 50px;
 	height: 800px;
+	/* border: 1px solid black; */
 	overflow: hidden;
 }
 
-#map #mapMenu {
-	position: absolute;
+#map #mapMenu{
 	width: 160px;
+	position: absolute; 
 	z-index: 2;
 	margin-top: 20px;
 	margin-left: 20px;
-	background-color: white;
+	background-color: #F8F9FA;
 	border: 1px solid black;
+	/* border-radius: 50px;
+	box-shadow: 2px 2px 2px 2px gray; */
 }
 
-#map .dropdown-menu {
+#map .dropdown-menu{
 	text-align: center;
 }
 
-#map .dropdown-menu li {
+#map .dropdown-menu li{
 	margin: 5px;
 }
 
-#map .dropdown-menu li:hover {
+#map .dropdown-menu li:hover{
 	cursor: pointer;
 	text-decoration: underline;
 }
 
-#mapLocalInfo {
+#mapOverlay{
 	padding: 5px 0;
 	text-align: center;
 	width: 180px;
@@ -90,7 +80,7 @@ nav {
 	border-radius: 10px;
 }
 
-#mapLocalInfo li:first-child:hover {
+#mapOverlay li:first-child:hover{
 	text-decoration: underline;
 }
 
@@ -98,7 +88,8 @@ nav {
 /* FOOTER                     */
 /******************************/
 
-footer {
+footer{
 	background-color: white;
 	border-top: 1px lightgray solid;
 }
+

@@ -119,9 +119,9 @@ var polygon2 = new kakao.maps.Polygon({
 });
 
 // 오버레이-------------------------------------------------------------------------------------
-var content1 = '<ul id="mapLocalInfo"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">송파구 위례동</li><li class="tempNum"></li></ul>';
-var content2 = '<ul id="mapLocalInfo"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">하남시 위례동</li><li class="tempNum"></li></ul>';
-var content3 = '<ul id="mapLocalInfo"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">성남시 위례동</li><li class="tempNum"></li></ul>';
+var content1 = '<ul id="mapOverlay"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">송파구 위례동</li><li class="tempNum"></li></ul>';
+var content2 = '<ul id="mapOverlay"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">하남시 위례동</li><li class="tempNum"></li></ul>';
+var content3 = '<ul id="mapOverlay"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">성남시 위례동</li><li class="tempNum"></li></ul>';
 
 // 커스텀 오버레이가 표시될 위치입니다 
 var position1 = new kakao.maps.LatLng(37.47860551575809, 127.16237294151435);

@@ -21,7 +21,7 @@ function drawChart1() {
         },
 
     };
-    var chart = new google.charts.Bar(document.getElementById('OpenCloseHosChart'));
+    var chart = new google.charts.Bar(document.getElementById('hospitalStatusDashboard'));
     chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
@@ -41,7 +41,7 @@ function drawChart2() {
         },
 
     };
-    var chart = new google.charts.Bar(document.getElementById('residentChart'));
+    var chart = new google.charts.Bar(document.getElementById('residentDashboard'));
     chart.draw(data, google.charts.Bar.convertOptions(options));
 }
 
@@ -73,7 +73,7 @@ function drawChart3() {
         // height: 500
     };
 
-    var chart = new google.charts.Line(document.getElementById('quarterlyPopChart'));
+    var chart = new google.charts.Line(document.getElementById('floatingDashboard'));
 
     chart.draw(data, google.charts.Line.convertOptions(options));
 }
@@ -106,7 +106,7 @@ function drawChart4() {
 
     };
 
-    var chart = new google.charts.Line(document.getElementById('forecastChart'));
+    var chart = new google.charts.Line(document.getElementById('forecastDashboard'));
 
     chart.draw(data, google.charts.Line.convertOptions(options));
 }
