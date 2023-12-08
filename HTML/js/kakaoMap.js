@@ -169,9 +169,9 @@ function addArea() {
 	customOverlay1.setMap(map);
 	customOverlay2.setMap(map);
 	customOverlay3.setMap(map);
-	marker1.setMap(null);
-	marker2.setMap(null);
-	marker3.setMap(null);
+	for (let i = 0; i < markerTemp.length; i++) {
+		markerTemp[i].setMap(null);
+	}
 }
 
 function delArea() {
@@ -181,23 +181,80 @@ function delArea() {
 	customOverlay1.setMap(null);
 	customOverlay2.setMap(null);
 	customOverlay3.setMap(null);
-	marker1.setMap(map);
-	marker2.setMap(map);
-	marker3.setMap(map);
+	for (let i = 0; i < markerTemp.length; i++) {
+		markerTemp[i].setMap(map);
+	}
+
 }
 
 // 지도이동-----------------------------------------------------------------
 function setDraggable(draggable) {
 	// 마우스 드래그로 지도 이동 가능여부를 설정합니다
-	map.setDraggable(draggable);    
+	map.setDraggable(draggable);
 }
 
 
 function setZoomable(zoomable) {
 	// 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
-	map.setZoomable(zoomable);    
+	map.setZoomable(zoomable);
 }
-window.addEventListener('load', function(){
-  setDraggable();
+window.addEventListener('load', function () {
+	setDraggable();
 	setZoomable();
+});
+
+function loadItems() {
+	return fetch("./json/hanam.json")
+		.then((response) => response.json())
+		.then((json) => json.DATA);
+}
+
+const hos = [];
+const positionTemp = [];
+const markerTemp = [];
+loadItems().then((DATA) => {
+
+	for (let i = 0; i < DATA.length; i++) {
+		if (DATA[i].BSN_STATE_NM === "영업/정상" && DATA[i].REFINE_ROADNM_ADDR.includes('위례')) {
+			hos.push(DATA[i]);
+		}
+	}
+
+	for (let i = 0; i < hos.length; i++) {
+		if (hos[i].REFINE_WGS84_LAT != 0 && hos[i].REFINE_WGS84_LOGT != 0) {
+			positionTemp.push(new kakao.maps.LatLng(Number(hos[i].REFINE_WGS84_LAT), Number(hos[i].REFINE_WGS84_LOGT)));
+		}
+	}
+
+	for (let i = 0; i < positionTemp.length; i++) {
+		markerTemp.push(new kakao.maps.Marker({
+			position: positionTemp[i]
+		}));
+	}
+});
+
+function loadItems2() {
+	return fetch("./json/sungnam.json")
+		.then((response) => response.json())
+		.then((json) => json.DATA);
+}
+
+loadItems2().then((DATA) => {
+	for (let i = 0; i < DATA.length; i++) {
+		if (DATA[i].BSN_STATE_NM === "영업/정상" && DATA[i].REFINE_ROADNM_ADDR.includes('위례')) {
+			hos.push(DATA[i]);
+		}
+	}
+
+	for (let i = 0; i < hos.length; i++) {
+		if (hos[i].REFINE_WGS84_LAT != 0 && hos[i].REFINE_WGS84_LOGT != 0) {
+			positionTemp.push(new kakao.maps.LatLng(Number(hos[i].REFINE_WGS84_LAT), Number(hos[i].REFINE_WGS84_LOGT)));
+		}
+	}
+
+	for (let i = 0; i < positionTemp.length; i++) {
+		markerTemp.push(new kakao.maps.Marker({
+			position: positionTemp[i]
+		}));
+	}
 });
