@@ -1,20 +1,46 @@
-var data = {
-	labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+var barChartData = {
+	labels: ["2020", "2021", "2022", "2023"],
 	datasets: [{
-		label: 'BigData Analysis',
-		data: [65, 59, 80, 81, 56, 55, 40],
-		backgroundColor: ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'],
+		label: '개업',
+		backgroundColor: "#1E90FF",
+		data: [
+			1,
+			2,
+			3,
+			4
+		]
+	}, {
+		label: '폐업',
+		backgroundColor: "#F7464A",
+		data: [
+			4,
+			3,
+			2,
+			1
+		]
 	}]
 };
-var ctx = document.getElementById('openCloseHosChart').getContext('2d');
-var openCloseHosChart = new Chart(ctx, {
-	type: 'bar',
-	data: data,
-	options: {}
-});
+window.onload = function () {
+	var ctx = document.getElementById('openCloseHosChart').getContext('2d');
+	openCloseHosChart = new Chart(ctx, {
+		type: 'bar',
+		data: barChartData,
+		options: {
+			plugins: {
+				legend: {
+					labels: {
+						font: {
+							size: 20,
+							family: 'Noto Sans KR'
+						}
+					}
+				}
+			}
+		}
+	});
+}
 
 function resizeChart() {
 	openCloseHosChart.resize();
 }
-
 window.addEventListener('resize', resizeChart);

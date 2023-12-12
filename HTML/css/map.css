@@ -32,17 +32,21 @@ nav {
 	border-bottom: 1px lightgray solid;
 }
 
+#loginBtn {
+	background-color: darkgray;
+}
+
 /* content */
 
-#background{
+#background {
 	background-color: #F8F9FA;
 }
 
-#background .container{
+#background .container {
 	position: relative;
 }
 
-#background h1{
+#background h1 {
 	font-weight: bolder;
 }
 
@@ -61,6 +65,11 @@ nav {
 	margin-left: 20px;
 	background-color: white;
 	border: 1px solid black;
+}
+
+#map #mapMenu:hover {
+	background-color: #1E90FF;
+	color: white;
 }
 
 #map .dropdown-menu {
@@ -87,6 +96,7 @@ nav {
 
 #mapLocalInfo li:first-child:hover {
 	text-decoration: underline;
+	font-weight: bolder;
 }
 
 /******************************/
