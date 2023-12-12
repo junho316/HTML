@@ -1,22 +1,24 @@
+let songpaQu = ['3331838', '3469064', '3643283', '3527469', '3467145'];
+let seongnamQu = ['4000000', '4100000', '4300000', '4200000', '4500000'];
+let hanamQu = ['3500000', '4000000', '4100000', '3900000', '4000000'];
 var ctx = document.getElementById('quarterlyPopChart').getContext('2d');
-
 var quarterlyPopChart = new Chart(ctx, {
 	type: 'line',
 	data: {
-		labels: ['Label 1', 'Label 2', 'Label 3'], // X축 레이블
+		labels: ['2020', '2021', '2022', '2023', '2024'],
 		datasets: [{
-			label: '은평구',
-			data: [10, 20, 30], // 첫 번째 라인의 데이터
+			label: '송파구 위례',
+			data: songpaQu,
 			borderColor: 'blue', // 첫 번째 라인의 색상
 			borderWidth: 1
 		}, {
-			label: '서대문구',
-			data: [20, 30, 45], // 두 번째 라인의 데이터
+			label: '성남시 위례',
+			data: seongnamQu,
 			borderColor: 'red', // 두 번째 라인의 색상
 			borderWidth: 1
 		}, {
-			label: '마포구',
-			data: [15, 25, 35], // 두 번째 라인의 데이터
+			label: '하남시 위례',
+			data: hanamQu,
 			borderColor: 'black', // 두 번째 라인의 색상
 			borderWidth: 1
 		},

@@ -87,9 +87,21 @@
 					<ul class="dropdown-menu">
 						<li onclick="addArea();mapMenuClick(this)">거주 인구</li>
 						<li onclick="addArea();mapMenuClick(this)">유동 인구</li>
-						<li onclick="addArea();mapMenuClick(this)">인구/병원수</a></li>
+						<li onclick="addArea();mapMenuClick(this)">인구/병원수</li>
 						<li onclick="addArea();mapMenuClick(this)">병원수</li>
-						<li onclick="delArea();mapMenuClick(this)">병원 위치</li>
+						<li onclick="mapMenuClick(this);ClickHosCnt();hosLoc()">병원 위치</li>
+					</ul>
+				</div>
+				<div id="temp" class="dropdown">
+					<button class="btn btn-first dropdown-toggle" type="button" id="areaMenu" data-bs-toggle="dropdown"
+						aria-expanded="false">
+						지역
+					</button>
+					<ul class="dropdown-menu">
+						<li onclick="hosLocClick(this);	everyHos();">전체</li>
+						<li onclick="panTo()">송파구</li>
+						<li onclick="hanamHosLoc();hosLocClick(this);">하남시</li>
+						<li onclick="sungnamHosLoc();hosLocClick(this);">성남시</li>
 					</ul>
 				</div>
 			</div>

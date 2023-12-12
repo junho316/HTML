@@ -1,25 +1,31 @@
 var ctx = document.getElementById('residentChart').getContext('2d');
-
+let songpa = ['27561', '27870', '36332', '42590','68764'];
+let seongnam = ['42793', '43601', '43702', '42833', '46876'];
+let hanam = ['17877', '18073', '25320', '28920', '46873'];
 var residentChart = new Chart(ctx, {
 	type: 'line',
 	data: {
-		labels: ['Label 1', 'Label 2', 'Label 3'], // X축 레이블
-		datasets: [{
-			label: '은평구',
-			data: [10, 20, 30], // 첫 번째 라인의 데이터
-			borderColor: 'blue', // 첫 번째 라인의 색상
-			borderWidth: 1
-		}, {
-			label: '서대문구',
-			data: [20, 30, 45], // 두 번째 라인의 데이터
-			borderColor: 'red', // 두 번째 라인의 색상
-			borderWidth: 1
-		}, {
-			label: '마포구',
-			data: [15, 25, 35], // 두 번째 라인의 데이터
-			borderColor: 'black', // 두 번째 라인의 색상
-			borderWidth: 1
-		},
+		labels: ['2020', '2021', '2022', '2023', '2024'],
+		datasets: [
+			{ 
+				label : '송파구 위례',
+				data : songpa,
+				backgroundColor : '#1187CF',
+				type : 'bar'
+			},
+			{
+				label : '성남시 위례',
+				data : seongnam,
+				backgroundColor : '#B8E5E0',
+				type : 'bar'
+			},
+			{
+				label : '하남시 위례',
+				data : hanam,
+				backgroundColor : '#FFCD4A',
+				type : 'bar'
+			}
+
 		]
 	},
 	options: {

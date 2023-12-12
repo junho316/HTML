@@ -169,92 +169,188 @@ function addArea() {
 	customOverlay1.setMap(map);
 	customOverlay2.setMap(map);
 	customOverlay3.setMap(map);
-	for (let i = 0; i < markerTemp.length; i++) {
-		markerTemp[i].setMap(null);
-	}
+	deleteMarker();
+	map.setLevel(6);
+	var moveLatLon = new kakao.maps.LatLng(37.47601668950402, 127.15099417223486);
+	map.panTo(moveLatLon);
+	
 }
 
-function delArea() {
+function hosLoc() {
 	polygon.setMap(null);
 	polygon1.setMap(null);
 	polygon2.setMap(null);
 	customOverlay1.setMap(null);
 	customOverlay2.setMap(null);
 	customOverlay3.setMap(null);
-	for (let i = 0; i < markerTemp.length; i++) {
-		markerTemp[i].setMap(map);
+}
+
+
+function sungnamHosLoc() {
+	map.setLevel(5);
+	var moveLatLon = new kakao.maps.LatLng(37.468393767232406, 127.14408328318119);
+	map.panTo(moveLatLon);
+	deleteMarker();
+	sungnamHos();
+}
+
+function hanamHosLoc() {
+	map.setLevel(5);
+	var moveLatLon = new kakao.maps.LatLng(37.47860551575809, 127.16237294151435);
+	map.panTo(moveLatLon);
+	deleteMarker();
+	hanamHos();
+
+}
+
+function everyHos() {
+	map.setLevel(6);
+	var moveLatLon = new kakao.maps.LatLng(37.47601668950402, 127.15099417223486);
+	map.panTo(moveLatLon);
+	deleteMarker();
+	hanamHos();
+	sungnamHos();
+}
+
+function hanamHos() {
+	for (let i = 0; i < hos.length; i++) {
+		if (hos[i].REFINE_WGS84_LAT != 0 && hos[i].REFINE_WGS84_LOGT != 0) {
+			var data = hos[i];
+		}
+		displayMarker(data);
 	}
-
 }
 
-// 지도이동-----------------------------------------------------------------
-function setDraggable(draggable) {
-	// 마우스 드래그로 지도 이동 가능여부를 설정합니다
-	map.setDraggable(draggable);
+function sungnamHos() {
+	for (let i = 0; i < hos1.length; i++) {
+		if (hos1[i].REFINE_WGS84_LAT != 0 && hos1[i].REFINE_WGS84_LOGT != 0) {
+			var data = hos1[i];
+		}
+		displayMarker(data);
+	}
 }
 
+// json으로 가져오기----------------------------------------------------------------
+const hos = [];
+const positionTemp = [];
+const markerTemp = [];
 
-function setZoomable(zoomable) {
-	// 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
-	map.setZoomable(zoomable);
-}
-window.addEventListener('load', function () {
-	setDraggable();
-	setZoomable();
-});
-
-function loadItems() {
+function loadSungnam() {
 	return fetch("./json/hanam.json")
 		.then((response) => response.json())
 		.then((json) => json.DATA);
 }
 
-const hos = [];
-const positionTemp = [];
-const markerTemp = [];
-loadItems().then((DATA) => {
+loadSungnam().then((DATA) => {
 
 	for (let i = 0; i < DATA.length; i++) {
 		if (DATA[i].BSN_STATE_NM === "영업/정상" && DATA[i].REFINE_ROADNM_ADDR.includes('위례')) {
 			hos.push(DATA[i]);
 		}
 	}
-
-	for (let i = 0; i < hos.length; i++) {
-		if (hos[i].REFINE_WGS84_LAT != 0 && hos[i].REFINE_WGS84_LOGT != 0) {
-			positionTemp.push(new kakao.maps.LatLng(Number(hos[i].REFINE_WGS84_LAT), Number(hos[i].REFINE_WGS84_LOGT)));
-		}
-	}
-
-	for (let i = 0; i < positionTemp.length; i++) {
-		markerTemp.push(new kakao.maps.Marker({
-			position: positionTemp[i]
-		}));
-	}
 });
 
-function loadItems2() {
+// ----------------------------
+
+const hos1 = [];
+const positionTemp1 = [];
+const markerTemp1 = [];
+
+function loadHanam() {
 	return fetch("./json/sungnam.json")
 		.then((response) => response.json())
 		.then((json) => json.DATA);
 }
 
-loadItems2().then((DATA) => {
+loadHanam().then((DATA) => {
 	for (let i = 0; i < DATA.length; i++) {
 		if (DATA[i].BSN_STATE_NM === "영업/정상" && DATA[i].REFINE_ROADNM_ADDR.includes('위례')) {
-			hos.push(DATA[i]);
+			hos1.push(DATA[i]);
 		}
-	}
-
-	for (let i = 0; i < hos.length; i++) {
-		if (hos[i].REFINE_WGS84_LAT != 0 && hos[i].REFINE_WGS84_LOGT != 0) {
-			positionTemp.push(new kakao.maps.LatLng(Number(hos[i].REFINE_WGS84_LAT), Number(hos[i].REFINE_WGS84_LOGT)));
-		}
-	}
-
-	for (let i = 0; i < positionTemp.length; i++) {
-		markerTemp.push(new kakao.maps.Marker({
-			position: positionTemp[i]
-		}));
 	}
 });
+
+
+// ----------------------------
+
+const hos2 = [];
+const positionTemp2 = [];
+const markerTemp2 = [];
+function loadSongpa() {
+	return fetch("./json/seoulHos.json")
+		.then((response) => response.json())
+		.then((json) => json.DATA);
+}
+
+loadSongpa().then((DATA) => {
+	for (let i = 0; i < DATA.length; i++) {
+		if (DATA[i].dtlstatenm === "영업중" && DATA[i].rdnwhladdr.includes('위례')) {
+			hos2.push(DATA[i]);
+		}
+	}
+
+	for (let i = 0; i < hos2.length; i++) {
+		if (hos2[i].x != 0 && hos2[i].y != 0) {
+			positionTemp2.push(new kakao.maps.Coords(hos2[i].x, hos2[i].y).toLatLng());
+		}
+	}
+
+	for (let i = 0; i < positionTemp2.length; i++) {
+		markerTemp2.push(new kakao.maps.Marker({
+			position: positionTemp2[i]
+		}));
+	}
+
+	for (let i = 0; i < markerTemp2.length; i++) {
+		markerTemp2[i].setMap(map);
+	}
+});
+
+// ----------------------------------------
+
+const markerArr = [];
+var overlayDel;
+function displayMarker(data) {
+	var position = new kakao.maps.LatLng(Number(data.REFINE_WGS84_LAT), Number(data.REFINE_WGS84_LOGT));
+
+	var marker = new kakao.maps.Marker({
+		map: map,
+		position: position
+	});
+
+	markerArr.push(marker);
+	var overlay = new kakao.maps.CustomOverlay({
+		yAnchor: 3,
+		position: marker.getPosition()
+	});
+	overlayDel = overlay;
+
+	var content = document.createElement('div');
+	content.innerHTML = data.BIZPLC_NM;
+	content.style.cssText = 'background: white; border: 1px solid black';
+
+	var content1 = document.createElement('div');
+	content1.innerHTML = data.REFINE_ROADNM_ADDR;
+	content1.style.cssText = 'background: white; border: 1px solid black';
+
+	var closeBtn = document.createElement('button');
+	closeBtn.innerHTML = '닫기';
+	closeBtn.onclick = function () {
+		overlay.setMap(null);
+	};
+	content.appendChild(closeBtn);
+	content.appendChild(content1);
+	overlay.setContent(content);
+
+	kakao.maps.event.addListener(marker, 'click', function () {
+		overlayDel.setMap(null);
+		overlay.setMap(map);
+		overlayDel = overlay;
+	});
+}
+
+function deleteMarker() {
+	for (let i = 0; i < markerArr.length; i++) {
+		markerArr[i].setMap(null);
+	}
+}

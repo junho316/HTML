@@ -1,22 +1,24 @@
 var ctx = document.getElementById('forecastChart').getContext('2d');
-
+let songpaF = ['27870', '36332', '42590', '48764', '48764', '48764', '48764'];
+let seongnamF = ['42793', '43000', '43500', '42000', '44000', '42000', '42000'];
+let hanamF = ['17000', '18000', '25000', '26000', '27000', '27000', '27500'];
 var forecastChart = new Chart(ctx, {
 	type: 'line',
 	data: {
-		labels: ['Label 1', 'Label 2', 'Label 3'], // X축 레이블
+		labels: ['2019년', '2020년', '2021년', '2022년', '2023년', '2024년', '2025년'],
 		datasets: [{
-			label: '은평구',
-			data: [10, 20, 30], // 첫 번째 라인의 데이터
+			label: '송파구 위례',
+			data: songpaF,
 			borderColor: 'blue', // 첫 번째 라인의 색상
 			borderWidth: 1
 		}, {
-			label: '서대문구',
-			data: [20, 30, 45], // 두 번째 라인의 데이터
+			label: '송파구 위례',
+			data: seongnamF,
 			borderColor: 'red', // 두 번째 라인의 색상
 			borderWidth: 1
 		}, {
-			label: '마포구',
-			data: [15, 25, 35], // 두 번째 라인의 데이터
+			label: '하남시 위례',
+			data: hanamF,
 			borderColor: 'black', // 두 번째 라인의 색상
 			borderWidth: 1
 		},
