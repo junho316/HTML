@@ -19,7 +19,7 @@ var forecastChart = new Chart(ctx, {
 		}, {
 			label: '하남시 위례',
 			data: hanamF,
-			borderColor: 'black', // 두 번째 라인의 색상
+			borderColor: 'green', // 두 번째 라인의 색상
 			borderWidth: 1
 		},
 		]

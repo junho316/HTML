@@ -226,7 +226,7 @@ function displayMarker(data) {
 	var marker = new kakao.maps.Marker({
 		map: map,
 		position: position,
-		image: markerImage
+		image: markerImage,
 	});
 
 	markerArr.push(marker);
@@ -241,13 +241,16 @@ function displayMarker(data) {
 	content.style.cssText = 'background: white; border: 1px solid black; border-radius: 10px; padding:5px';
 
 	var content1 = document.createElement('div');
-	content1.innerHTML = data.REFINE_ROADNM_ADDR;
-	content1.style.cssText = 'border: 0px solid black';
+	content1.innerHTML = '주소 : ' + data.REFINE_ROADNM_ADDR;
+	content1.style.cssText = 'border: 0px solid black;';
 
 	var closeBtn = document.createElement('button');
-	closeBtn.innerHTML = '<i class="bi bi-7-square"></i>';
-	closeBtn.style.border = '0px';
+	closeBtn.innerHTML = '<i class="bi bi-x-lg"></i>';
+	closeBtn.style.backgroundColor = 'white';
 	closeBtn.style.float = 'right';
+	closeBtn.style.border = '0px';
+	closeBtn.style.marginRight = '5px';
+
 
 	closeBtn.onclick = function () {
 		overlay.setMap(null);
@@ -307,10 +310,10 @@ function displayArea(coordinates) {
 		map: map,
 		path: path,
 		strokeWeight: 4,
-		strokeColor: 'blue',
+		strokeColor: 'red',
 		strokeOpacity: 0.5,
 		strokeStyle: 'solid',
-		fillColor: 'blue',
+		fillColor: 'red',
 		fillOpacity: 0.05
 	}));
 }

@@ -22,7 +22,7 @@ var residentChart = new Chart(ctx, {
 			{
 				label: '하남시 위례',
 				data: hanam,
-				backgroundColor: 'black',
+				backgroundColor: 'green',
 				type: 'bar'
 			}
 

@@ -1,44 +1,9 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Noto Sans KR', sans-serif;
-}
-
-#container {
-	margin: 0 auto;
-	width: 100%;
-	font-weight: bolder
-}
-
-a {
-	text-decoration: none;
-}
-
-ul {
-	list-style: none;
-}
-
+/* content */
 .boxShadow {
 	background-color: white;
 	border-radius: 50px;
 	box-shadow: 5px 5px 5px 5px lightgray;
 }
-
-/* HEADER  */
-
-nav {
-	background-color: white;
-	border-bottom: 1px lightgray solid;
-}
-
-#loginBtn {
-	background-color: darkgray;
-}
-
-
-/* content */
-
 #background {
 	background-color: #F8F9FA;
 }
@@ -113,13 +78,4 @@ nav {
 
 #mapLocalInfo li:first-child:hover {
 	text-decoration: underline;
-}
-
-/******************************/
-/* FOOTER                     */
-/******************************/
-
-footer {
-	background-color: white;
-	border-top: 1px lightgray solid;
 }
