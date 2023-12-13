@@ -10,8 +10,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 var map = new kakao.maps.Map(mapContainer, mapOption);
 
 // 오버레이-------------------------------------------------------------------------------------
-var content1 = '<ul id="mapLocalInfo"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">송파구 위례동</li><li class="tempNum"></li></ul>';
-var content2 = '<ul id="mapLocalInfo"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">하남시 위례동</li><li class="tempNum"></li></ul>';
+var content1 = '<ul id="mapLocalInfo"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">하남시 위례동</li><li class="tempNum"></li></ul>';
+var content2 = '<ul id="mapLocalInfo"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">송파구 위례동</li><li class="tempNum"></li></ul>';
 var content3 = '<ul id="mapLocalInfo"><li data-bs-toggle="modal" data-bs-target="#areaPopUP" onclick="ClickPopUpBtn(this)">성남시 위례동</li><li class="tempNum"></li></ul>';
 
 var position1 = new kakao.maps.LatLng(37.47860551575809, 127.16237294151435);
@@ -215,31 +215,40 @@ var overlayDel = new kakao.maps.CustomOverlay({
 	yAnchor: 3,
 	position: null
 });;
+
+var imageSrc = "../img/hosMark.png"
+var imageSize = new kakao.maps.Size(20, 20);
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+
 function displayMarker(data) {
 	var position = new kakao.maps.LatLng(Number(data.REFINE_WGS84_LAT), Number(data.REFINE_WGS84_LOGT));
 
 	var marker = new kakao.maps.Marker({
 		map: map,
-		position: position
+		position: position,
+		image: markerImage
 	});
 
 	markerArr.push(marker);
 
 	var overlay = new kakao.maps.CustomOverlay({
 		yAnchor: 3,
-		position: marker.getPosition()
+		position: marker.getPosition(),
 	});
 
 	var content = document.createElement('div');
 	content.innerHTML = data.BIZPLC_NM;
-	content.style.cssText = 'background: white; border: 1px solid black';
+	content.style.cssText = 'background: white; border: 1px solid black; border-radius: 10px;';
 
 	var content1 = document.createElement('div');
 	content1.innerHTML = data.REFINE_ROADNM_ADDR;
-	content1.style.cssText = 'background: white; border: 1px solid black';
+	content1.style.cssText = 'border: 0px solid black';
 
 	var closeBtn = document.createElement('button');
 	closeBtn.innerHTML = '닫기';
+	closeBtn.style.border = '0px';
+	closeBtn.style.textAlign = '';
+
 	closeBtn.onclick = function () {
 		overlay.setMap(null);
 	};
@@ -298,11 +307,11 @@ function displayArea(coordinates) {
 		map: map,
 		path: path,
 		strokeWeight: 4,
-		strokeColor: 'red',
+		strokeColor: 'blue',
 		strokeOpacity: 0.5,
 		strokeStyle: 'solid',
-		fillColor: 'red',
-		fillOpacity: 0.1
+		fillColor: 'blue',
+		fillOpacity: 0.05
 	}));
 }
 function deleteArea() {

@@ -64,7 +64,7 @@ nav {
 }
 
 #quarterlyPopTable table th {
-	background-color: #F8F9FA;
+	background-color: lightgray;
 }
 
 #quarterlyPopTable table tr {
@@ -89,7 +89,7 @@ nav {
 }
 
 #dayOfTheWeekTable table th {
-	background-color: #F8F9FA;
+	background-color: lightgray;
 }
 
 /******************************/
@@ -114,7 +114,7 @@ nav {
 }
 
 #residentTable table th {
-	background-color: #F8F9FA;
+	background-color: lightgray;
 }
 
 /* 성별 연령 */
@@ -130,7 +130,7 @@ nav {
 }
 
 #ageGenderTable table th {
-	background-color: #F8F9FA;
+	background-color: lightgray;
 }
 
 /******************************/
@@ -156,7 +156,7 @@ nav {
 }
 
 #forecastTable table th {
-	background-color: #F8F9FA;
+	background-color: lightgray;
 }
 
 /******************************/

@@ -41,18 +41,20 @@
 
 				<!-- sidebar body -->
 				<div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
-					<ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3" style="text-align: center;">
-						<div class="dropdown-center">
-							<li class="nav-item dropdown mx-5">
+					<ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
+
+						<li class="nav-item dropdown mx-5">
+							<div class="dropdown-center">
 								<a class="nav-link dropdown-toggle" href="#" role="button"
-									data-bs-toggle="dropdown">&nbsp;&nbsp;&nbsp;입지분석</a>
-								<ul class="dropdown-menu" style="text-align: center; ">
+									data-bs-toggle="dropdown">입지분석</a>
+								<ul class="dropdown-menu">
 									<li><a class="dropdown-item" href="population.html">인구분석</a></li>
 									<li><a class="dropdown-item" href="hospitalStatus.html">병원현황</a></li>
 									<li><a class="dropdown-item" href="map.html">지도</a></li>
 								</ul>
-							</li>
-						</div>
+							</div>
+						</li>
+
 						<li class="nav-item mx-5">
 							<a class="nav-link" href="#">매출분석</a>
 						</li>
@@ -79,8 +81,7 @@
 			<h1>지도</h1>
 			<div id="map" class="col-lg-12 boxShadow">
 				<div class="dropdown">
-					<button class="btn btn-first dropdown-toggle" type="button" id="mapMenu" data-bs-toggle="dropdown"
-						aria-expanded="false">
+					<button class="btn btn-first dropdown-toggle" type="button" id="mapMenu" data-bs-toggle="dropdown">
 						선택
 					</button>
 					<ul class="dropdown-menu">
@@ -92,8 +93,7 @@
 					</ul>
 				</div>
 				<div id="temp" class="dropdown">
-					<button class="btn btn-first dropdown-toggle" type="button" id="areaMenu" data-bs-toggle="dropdown"
-						aria-expanded="false">
+					<button class="btn btn-first dropdown-toggle" type="button" id="areaMenu" data-bs-toggle="dropdown">
 						지역
 					</button>
 					<ul class="dropdown-menu">
@@ -109,40 +109,40 @@
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade" id="areaPopUP" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal fade" id="areaPopUP" tabindex="-1">
 		<div class="modal-dialog modal-dialog-centered">
 			<div class="modal-content">
 				<div class="modal-header">
 					<h5 class="modal-title" id="PopUpArea"></h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 				</div>
 				<div class="modal-body">
-					<table class="table">
+					<table class="table table-bordered border-black">
 						<thead>
 							<tr>
-								<th scope="col"></th>
-								<th scope="col">수/명</th>
+								<th></th>
+								<td>수/명</td>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<th scope="row">병원수</th>
+								<th>병원수</th>
 								<td>1</td>
 							</tr>
 							<tr>
-								<th scope="row">유동인구</th>
+								<th>유동인구</th>
 								<td>2</td>
 							</tr>
 							<tr>
-								<th scope="row">주거인구</th>
+								<th>주거인구</th>
 								<td>3</td>
 							</tr>
 							<tr>
-								<th scope="row">인구/병원수</th>
+								<th>인구/병원수</th>
 								<td>4</td>
 							</tr>
 							<tr>
-								<th scope="row">가장많은 연령대</th>
+								<th>가장많은 연령대</th>
 								<td>5</td>
 							</tr>
 						</tbody>

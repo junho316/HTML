@@ -6,8 +6,8 @@ var barChartData = {
 		data: [
 			1,
 			2,
-			3,
-			4
+			2,
+			3
 		]
 	}, {
 		label: '폐업',
@@ -16,7 +16,7 @@ var barChartData = {
 			4,
 			3,
 			2,
-			1
+			2
 		]
 	}]
 };

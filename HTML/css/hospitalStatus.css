@@ -22,6 +22,7 @@ table tbody th {
 	width: 15%;
 }
 
+
 .boxShadow {
 	background-color: white;
 	border-radius: 50px;
@@ -37,7 +38,7 @@ table tbody th {
 	padding-right: 20px;
 }
 
-table tr th {
+table th {
 	background-color: black;
 }
 
@@ -78,7 +79,7 @@ nav {
 
 
 #OpenCloseHosTable table th {
-	background-color: #F8F9FA;
+	background-color: lightgray;
 }
 
 /**********************************  */
@@ -100,7 +101,7 @@ nav {
 }
 
 #numOfHosTable table th {
-	background-color: #F8F9FA;
+	background-color: lightgray;
 }
 
 /**********************************  */
@@ -122,7 +123,7 @@ nav {
 }
 
 #popuDivideHosTable table th {
-	background-color: #F8F9FA;
+	background-color: lightgray;
 }
 
 /******************************/
