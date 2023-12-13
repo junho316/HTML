@@ -238,16 +238,16 @@ function displayMarker(data) {
 
 	var content = document.createElement('div');
 	content.innerHTML = data.BIZPLC_NM;
-	content.style.cssText = 'background: white; border: 1px solid black; border-radius: 10px;';
+	content.style.cssText = 'background: white; border: 1px solid black; border-radius: 10px; padding:5px';
 
 	var content1 = document.createElement('div');
 	content1.innerHTML = data.REFINE_ROADNM_ADDR;
 	content1.style.cssText = 'border: 0px solid black';
 
 	var closeBtn = document.createElement('button');
-	closeBtn.innerHTML = '닫기';
+	closeBtn.innerHTML = '<i class="bi bi-7-square"></i>';
 	closeBtn.style.border = '0px';
-	closeBtn.style.textAlign = '';
+	closeBtn.style.float = 'right';
 
 	closeBtn.onclick = function () {
 		overlay.setMap(null);
