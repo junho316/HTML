@@ -40,11 +40,9 @@
 					<h5 class="offcanvas-title" id="offcanvasNavbarLabel">LOGO</h5>
 					<button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas"></button>
 				</div>
-
 				<!-- sidebar body -->
 				<div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0">
 					<ul class="navbar-nav justify-content-center fs-5 flex-grow-1 pe-3">
-
 						<li class="nav-item dropdown mx-5">
 							<div class="dropdown-center">
 								<a class="nav-link dropdown-toggle" href="#" role="button"
@@ -85,14 +83,11 @@
 		</div>
 
 		<div id="OpenCloseHos" class="container boxShadow">
-
 			<div style="height: 50px; width: 100px; margin-top: 50px;"></div>
 			<h4>개폐업 현황</h4>
-
 			<div id="chartArea" class="col-sm-12">
 				<canvas id="openCloseHosChart" style="width: 100%;"></canvas>
 			</div>
-
 			<div id="OpenCloseHosTable" class="table-responsive">
 				<table class=" table table-bordered border-black align-middle text-center">
 					<thead>
@@ -123,103 +118,104 @@
 				</table>
 			</div>
 		</div>
-	</div>
 
-	<!--병원수 현황---------------------------------------------------------------  -->
-	<div id=" numOfHos" class=" container boxShadow">
-		<div style="height: 50px; width: 100px; margin-top: 50px;"></div>
-		<h4>병원수 현황</h4>
-		<div id="numOfHosTable" class="table-responsive">
-			<table class="table table-bordered border-black align-middle text-center"">
-			<thead>
-				<tr>
-					<th></th>
-					<th>2020년</th>
-					<th>2021년</th>
-					<th>2022년</th>
-					<th>2023년</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>송파구 위례동</td>
-					<td>5</td>
-					<td>6</td>
-					<td>3</td>
-					<td>5</td>
-				</tr>
-				<tr>
-					<td>성남시 위례동</td>
-					<td>3</td>
-					<td>5</td>
-					<td>4</td>
-					<td>6</td>
-				</tr>
-				<tr>
-					<td>하남시 위례동</td>
-					<td>4</td>
-					<td>3</td>
-					<td>5</td>
-					<td>5</td>
-				</tr>
-				</tbody>
-			</table>
+
+		<!--병원수 현황---------------------------------------------------------------  -->
+		<div id=" numOfHos" class=" container boxShadow">
+			<div style="height: 50px; width: 100px; margin-top: 50px;"></div>
+			<h4>병원수 현황</h4>
+			<div id="numOfHosTable" class="table-responsive">
+				<table class="table table-bordered border-black align-middle text-center">
+					<thead>
+						<tr>
+							<th></th>
+							<th>2020년</th>
+							<th>2021년</th>
+							<th>2022년</th>
+							<th>2023년</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>송파구 위례동</td>
+							<td>5</td>
+							<td>6</td>
+							<td>3</td>
+							<td>5</td>
+						</tr>
+						<tr>
+							<td>성남시 위례동</td>
+							<td>3</td>
+							<td>5</td>
+							<td>4</td>
+							<td>6</td>
+						</tr>
+						<tr>
+							<td>하남시 위례동</td>
+							<td>4</td>
+							<td>3</td>
+							<td>5</td>
+							<td>5</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<!--병원당 인구수---------------------------------------------------------------  -->
+		<div id=" popuDivideHos" class="container boxShadow">
+			<div style="height: 50px; width: 100px; margin-top: 50px;"></div>
+			<h4>병원 1개당 인구수</h4>
+			<div id="popuDivideHosTable" class="table-responsive">
+				<table class="table table-bordered border-black align-middle text-center">
+					<thead>
+						<tr>
+							<th></th>
+							<th>인구 / 병원수</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>송파구 위례동</td>
+							<td>4,000</td>
+						</tr>
+						<tr>
+							<td>성남시 위례동</td>
+							<td>4,000</td>
+						</tr>
+						<tr>
+							<td>하남시 위례동</td>
+							<td>4,000</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div style=" height: 50px; width: 100px;">
 		</div>
 	</div>
 
-	<!--병원당 인구수---------------------------------------------------------------  -->
-	<div id=" popuDivideHos" class="container boxShadow">
-		<div style="height: 50px; width: 100px; margin-top: 50px;"></div>
-		<h4>병원 1개당 인구수</h4>
-		<div id="popuDivideHosTable" class="table-responsive">
-			<table class="table table-bordered border-black align-middle text-center"">
-				<thead>
-					<tr>
-						<th></th>
-						<th>인구 / 병원수</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>송파구 위례동</td>
-						<td>4,000</td>
-					</tr>
-					<tr>
-						<td>성남시 위례동</td>
-						<td>4,000</td>
-					</tr>
-					<tr>
-						<td>하남시 위례동</td>
-						<td>4,000</td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
 	</div>
-		<div style=" height: 50px; width: 100px;"></div>
-		</div>
+	<!-------------------------------------- ------------------------------------------------------->
 
-
-		<!-------------------------------------- ------------------------------------------------------->
-
-		<footer class="text-body-secondary py-5">
-			<div class="container">
-				<div class="row">
-					<div class="col-6">
-						<p class="mb-1">이용약관 개인정보처리방침 회사소개</p>
-						<p></p>
-						<p class="mb-1">서울특별시 마포구 </p>
-						<p class="mb-0">대표번호 : 02-1111-1111 l FAX : 02-111-1111</p>
-					</div>
-					<div class="col-6">
-						<p class="float-end mb-1">
-							Lorem ipsum dolor sit amet consectetu
-						</p>
-					</div>
+	<footer class="text-body-secondary py-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-6">
+					<p class="mb-1">이용약관 개인정보처리방침 회사소개</p>
+					<p></p>
+					<p class="mb-1">서울특별시 마포구 </p>
+					<p class="mb-0">대표번호 : 02-1111-1111 l FAX : 02-111-1111</p>
+				</div>
+				<div class="col-6">
+					<p class="float-end mb-1">
+						Lorem ipsum dolor sit amet consectetu
+					</p>
 				</div>
 			</div>
-		</footer>
-		<script src="js/openCloseHosChart.js"></script>
+		</div>
+	</footer>
+	<script src="js/openCloseHosChart.js"></script>
 </body>
 
 </html>
