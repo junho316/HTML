@@ -37,6 +37,10 @@ table tbody th {
 	padding-right: 20px;
 }
 
+table tr th {
+	background-color: black;
+}
+
 /* nav */
 
 nav {

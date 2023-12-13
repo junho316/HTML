@@ -26,11 +26,15 @@ ul {
 
 /* HEADER  */
 
-
 nav {
 	background-color: white;
 	border-bottom: 1px lightgray solid;
 }
+
+#loginBtn {
+	background-color: darkgray;
+}
+
 
 /* content */
 
